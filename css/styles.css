@@ -56,6 +56,11 @@ a:hover {
 	color: var(--bg-blue);
 }
 
+header .navbar {
+	background: var(--bg-dark);
+	z-index: 2;
+}
+
 header nav ul li {
 	position: relative;
 }
@@ -89,7 +94,7 @@ header nav ul li a:hover::after {
 	top: 50%;
 	font-size: 2rem;
 	writing-mode: vertical-rl;
-	z-index: 5;
+	z-index: 1;
 }
 
 .intro .container div:first-child h2 {
