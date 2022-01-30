@@ -81,7 +81,6 @@ header nav ul li a:hover::after {
 }
 
 
-
 /*-----------------INTRODUCTION------------------*/
 
 .icon {
@@ -90,7 +89,7 @@ header nav ul li a:hover::after {
 	top: 50%;
 	font-size: 2rem;
 	writing-mode: vertical-rl;
-	z-index: -1;
+	z-index: 5;
 }
 
 .intro .container div:first-child h2 {
