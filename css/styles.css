@@ -39,6 +39,23 @@ html {
 	background-color: var(--bg-blue);
 }
 
+.button  {
+	outline: none;
+	padding: 10px 40px;	
+	border: 1px solid #fff;
+	background: transparent;
+	font-size: 1rem;
+	font-weight: lighter;
+}
+
+.button:hover {
+	background: #fff;
+}
+
+a:hover {
+	color: var(--bg-blue);
+}
+
 header nav ul li {
 	position: relative;
 }
@@ -87,6 +104,10 @@ header nav ul li a:hover::after {
 	text-align: center;	
 }
 
+.intro .container div:nth-child(2) .button {
+	
+}
+
 .intro .container div:nth-child(2) span {
 	color: var(--yellow);
 }
@@ -98,22 +119,6 @@ header nav ul li a:hover::after {
 
 .intro .container div:nth-child(2) p:last-child {
 	font-size: 1rem;
-}
-
-.intro .container div:nth-child(2) .button  {
-	outline: none;
-	padding: 8px 15px;
-	border: 1px solid #fff;
-	background: transparent;
-
-}
-
-.intro .container div:nth-child(2) .button:hover {
-	background: #fff;
-}
-
-.intro .container div:nth-child(2) .button:hover, a:hover {
-	color: #000;
 }
 
 .intro .container div:last-child h2 {
@@ -156,6 +161,31 @@ img[src*="asset/image/Fahm.jpg"] {
 
 /*-------------------SKILLS-------------------*/
 
+#Skills .container .skills::after {
+	position: absolute;
+	content: '';
+	height: 3px;
+	width: 30px;
+	color: transparent;
+	background-color: #F7DF1E;
+	border-radius: 3px;
+	bottom: 5px;
+	left: 15px;
+
+	}
+
+	#Skills .container h4 {
+	border: 2px solid #fff;
+	padding: 10px 20px;
+	width: fit-content;
+	transition: 0.4s transform ease-in-out;
+	cursor: pointer;
+	}
+
+	#Skills .container h4:hover {
+	transform: translateY(-10px);
+	}
+
 /*-------------------SKILLS TAB/DESKTOP VIEW-------------------*/
 
 #Skills .desktopskills {
@@ -170,8 +200,42 @@ img[src*="asset/image/Fahm.jpg"] {
 #Skills .desktopskills div:hover {
 	transform: translateY(-10px);
 }
-	
 
+/*-------------------PROJECTS-------------------*/
+#Projects .container .projects::after {
+	position: absolute;
+	content: '';
+	height: 3px;
+	width: 50px;
+	color: transparent;
+	background-color: #F7DF1E;
+	border-radius: 3px;
+	bottom: 0;
+	left: 15px;
+}
+
+#Projects img {
+	width: 50%;
+	height: 300px;
+	padding: 10px;
+	border: 1px solid #fff;
+	border-radius: 10px;
+}
+
+#Projects .btn-blue {
+	color: #fff;
+	transition: 0.4s transform ease-in-out;
+}
+
+#Projects .btn-blue:hover {
+	transform: scale(0.9);
+}
+
+#Projects #hidden {
+	display: none;
+}
+
+/*-------------------FOOTER-------------------*/
 
 
 
@@ -230,37 +294,19 @@ img[src*="asset/image/Fahm.jpg"] {
 		float: left;
 	}
 
-	/*-------------------ABOUT-------------------*/
-
-
- 	/*-------------------SKILLS MOBILE VIEW-------------------*/
-
-	#Skills .container .skills::after {
-		position: absolute;
-		content: '';
-		height: 3px;
-		width: 30px;
-		color: transparent;
-		background-color: #F7DF1E;
-		border-radius: 3px;
-		bottom: 5px;
-		left: 15px;
-
-	}
-
-	#Skills .container h4 {
-		border: 2px solid #fff;
-		padding: 10px 20px;
-		width: fit-content;
-		transition: 0.4s transform ease-in-out;
-		cursor: pointer;
-	}
-
-	#Skills .container h4:hover {
-		transform: translateY(-10px);
+	/*-------------------PROJECTS-------------------*/
+	#Projects img {
+		width: 80%;
+		height: 200px;
 	}
 
 }
+
+
+
+
+
+
 
 @media screen and (max-width: 578px) {
 	/*-------------------INTRODUCTION-------------------*/
@@ -274,5 +320,6 @@ img[src*="asset/image/Fahm.jpg"] {
 
 	.intro .container div:nth-child(2) {
 		/*margin-top: 5rem;*/
-	}	
+	}
+
 }
