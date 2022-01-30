@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Rubik:wght@400;600&display=swap');
+
+:root {
+	--bg-dark: rgba(1, 25, 37, 0.87);
+	--bg-blue: #5A7FFF;
+	--yellow: #EBE207;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Rubik", sans-serif;
+	background: rgba(1, 25, 37, 0.87);
+	box-sizing: border-box;
+	color: #fff;
+	overflow-x: hidden;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.font2 {
+	font-family: "Josefin Sans", sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+/*-------------------HEADER---------------------*/
+
+.bg-nav {
+	background: var(--bg-dark);	
+}
+
+.btn-blue {
+	background-color: var(--bg-blue);
+}
+
+header nav ul li {
+	position: relative;
+}
+
+header nav ul li  a::after {
+	position: absolute;
+	content: "";
+	height: 2px;
+	border-radius: 3px;
+	background-color: var(--bg-blue);
+	bottom: 0px;
+	left: 0;
+	width: 0;
+	transition: width 0.4s ease-in-out;
+}
+
+header nav ul li .contact:hover::after {
+	width: 0;
+}
+
+header nav ul li a:hover::after {
+	width: 100%;
+}
+
+
+
+/*-----------------INTRODUCTION------------------*/
+
+.icon {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	font-size: 2rem;
+	writing-mode: vertical-rl;
+	z-index: -1;
+}
+
+.intro .container div:first-child h2 {
+ writing-mode: vertical-rl;
+ color: rgba(204, 204, 204, 0.67);
+ font-weight: bold;
+}
+
+.intro .container div:nth-child(2) {
+	font-weight: bold;
+	text-align: center;	
+}
+
+.intro .container div:nth-child(2) span {
+	color: var(--yellow);
+}
+
+.intro .container div:nth-child(2) p:first-child {
+	font-size: 2rem;
+	text-align: center;
+}
+
+.intro .container div:nth-child(2) p:last-child {
+	font-size: 1rem;
+}
+
+.intro .container div:nth-child(2) .button  {
+	outline: none;
+	padding: 8px 15px;
+	border: 1px solid #fff;
+	background: transparent;
+
+}
+
+.intro .container div:nth-child(2) .button:hover {
+	background: #fff;
+}
+
+.intro .container div:nth-child(2) .button:hover, a:hover {
+	color: #000;
+}
+
+.intro .container div:last-child h2 {
+	font-weight: bold;
+}
+
+.intro .container div:last-child span {
+	float: right;
+}
+
+.intro .container div:last-child .dot {
+	color: var(--yellow);
+	font-weight: bolder;
+}
+
+
+/*-------------------ABOUT-------------------*/
+#About p {
+	line-height: 1.6;
+}
+
+#About span {
+	font-size: 1.8rem;
+}
+
+#About .eye {
+	color: var(--yellow);
+}
+
+#About .mouth {
+	color: var(--bg-blue);
+}
+
+img[src*="asset/image/Fahm.jpg"] {
+	position: absolute;
+	height: 190px;
+	width: 180px;
+	transform: translate(15px,5px);
+}
+
+/*-------------------SKILLS-------------------*/
+
+/*-------------------SKILLS TAB/DESKTOP VIEW-------------------*/
+
+#Skills .desktopskills {
+	height: 100%;
+}
+
+#Skills .desktopskills div {
+	transition: 0.4s transform ease-in-out;
+	cursor: pointer;
+}
+
+#Skills .desktopskills div:hover {
+	transform: translateY(-10px);
+}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+	header nav ul li  a::after {
+		display: none;
+	}
+
+	/*-----------------INTRODUCTION------------------*/
+
+	.icon {
+		position: absolute;
+		left: 12%;
+		top: 15%;
+		writing-mode: horizontal-tb;
+		font-size: 1.3rem;
+	}
+
+
+	.intro .container div:nth-child(2) {
+		text-align: left;	
+	}
+
+	.intro .container div:nth-child(2) p:first-child {
+		font-size: 1.5rem;
+		text-align: left;
+	}
+
+	.intro .container div:nth-child(2) p:last-child {
+		font-size: .9rem;
+		font-weight: lighter;
+		text-align: left;
+	}
+
+	.intro .container div:nth-child(2) .button {
+		float: left;
+	}
+
+	/*-------------------ABOUT-------------------*/
+
+
+ 	/*-------------------SKILLS MOBILE VIEW-------------------*/
+
+	#Skills .container .skills::after {
+		position: absolute;
+		content: '';
+		height: 3px;
+		width: 30px;
+		color: transparent;
+		background-color: #F7DF1E;
+		border-radius: 3px;
+		bottom: 5px;
+		left: 15px;
+
+	}
+
+	#Skills .container h4 {
+		border: 2px solid #fff;
+		padding: 10px 20px;
+		width: fit-content;
+		transition: 0.4s transform ease-in-out;
+		cursor: pointer;
+	}
+
+	#Skills .container h4:hover {
+		transform: translateY(-10px);
+	}
+
+}
+
+@media screen and (max-width: 578px) {
+	/*-------------------INTRODUCTION-------------------*/
+
+	.icon {
+		position: absolute;
+		left: 3%;
+		top: 10%;
+		font-size: 1rem;
+	}
+
+	.intro .container div:nth-child(2) {
+		/*margin-top: 5rem;*/
+	}	
+}
